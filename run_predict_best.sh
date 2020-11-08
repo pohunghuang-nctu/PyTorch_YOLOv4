@@ -1,2 +1,7 @@
 #!/bin/bash
-python detect_new.py --source ~/lab3/data_host/mydata/sources/ --output ~/lab3/data_host/mydata/output --names ~/lab3/data_host/mydata/obj.names --cfg ~/lab3/data_host/mydata/yolov3_obj.cfg --weights ~/lab3/data_host/yolov3/weights/best.pt --save-txt
+cd $HOME/lab3/data_host/PyTorch_YOLOv4
+rm predict_result/*
+rm predict_img/*
+python detect_new.py --source ~/lab3/data_host/mydata/sources/ --output predict_result --weights weights/best.pt --save-txt
+mv predict_result/*.png predict_img
+python ../DLAPP_Lab3/metric.py

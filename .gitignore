@@ -1,3 +1,9 @@
 *.pyc
 __pycache__/*
 runs/*
+predict_result/*
+predict_img/*
+*.txt
+*.png
+*.jpg
+*.pt
